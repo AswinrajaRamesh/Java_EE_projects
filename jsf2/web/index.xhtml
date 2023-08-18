@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="Product Id"></h:outputLabel>
+                <h:inputText id="N1" value="#{productFunctions.pid}" required="true"></h:inputText>
+                <!--<h:message for="N1" style="color:red"></h:message>-->
+                    
+                <!--<h:outputText value="{productFunctions.pid}"></h:outputText>-->
+                
+                <h:outputLabel value="Name"></h:outputLabel>
+                <h:inputText value="#{productFunctions.name}" id="N2"></h:inputText>
+                <!--<h:outputText value="#{productFunctions.name}"></h:outputText>-->
+                
+                <h:outputLabel value="Price"></h:outputLabel>
+                <h:inputText value="#{productFunctions.price}" id="N3"></h:inputText>
+                
+                <!--<h:outputText value="#{productFunctions.price}"></h:outputText>-->
+            </h:panelGrid>
+            
+            <h:commandButton action="#{productFunctions.getProduct()}" value="GET"></h:commandButton>
+            <h:commandButton action="#{productFunctions.saveProduct()}" value="SAVE"></h:commandButton>
+            <h:commandButton action="#{productFunctions.deleteProduct()}" value="DELETE"></h:commandButton>
+            <br>
+                <h:outputText value="#{productFunctions.message}"></h:outputText></br>
+        </h:form>
+    </h:body>
+</html>
+

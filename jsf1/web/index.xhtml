@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="First Number"></h:outputLabel>
+                <h:inputText id="N1" value="#{calc.firstNumber}" required="true" 
+                             converterMessage="#{msg1.valueconvert}"
+                             requiredMessage="#{msg1.valuerequired}"
+                             validatorMessage="Negative number">
+                    <f:validateLongRange minimum="0"></f:validateLongRange>
+                </h:inputText>
+                <h:message for="N1" style="color:red"></h:message> 
+                
+                <h:outputLabel value="Second Number"></h:outputLabel>
+                <h:inputText value="#{calc.secondNumber}" required="true" id="N2" 
+                             converterMessage="#{msg1.valueconvert}"
+                             requiredMessage="#{msg1.valuerequired}"
+                             validatorMessage="Negative number">
+                    <f:validateLongRange minimum="0"></f:validateLongRange>
+                </h:inputText>
+                <h:message for="N2" style="color:red
+                           "></h:message>
+            </h:panelGrid>
+            
+            <h:commandButton action="#{calc.add}" value="Get Sum"></h:commandButton>
+            <h:outputText value="#{calc.message}"></h:outputText>
+        </h:form>
+    </h:body>
+</html>
+

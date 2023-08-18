@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Product Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="products" method='GET'>
+            <p>Product ID <input type='text' name='pid'></p>
+            <p>Name (Only for new) <input type='text' name='pnm'></p>
+            <p>Price (Only for new) <input type='text' name='ppr'></p>
+            <input type='submit' name='action' value='GetProduct'>
+            <input type='submit' name='action' value='SaveProduct'>
+            
+        </form>
+        <p><a href="products"> Get all products</a></p>
+    </body>
+</html>
